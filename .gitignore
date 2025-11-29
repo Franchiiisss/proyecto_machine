@@ -1,0 +1,14 @@
+# entornos virtuales
+env/
+venv/
+.venv/
+
+# cache python
+__pycache__/
+*.pyc
+
+# notebooks checkpoints
+.ipynb_checkpoints/
+
+# archivos sensibles
+.env
