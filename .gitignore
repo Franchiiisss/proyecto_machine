@@ -1,14 +1,31 @@
-# entornos virtuales
+# Entornos virtuales
 env/
 venv/
 .venv/
 
-# cache python
+# Cache Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
-# notebooks checkpoints
+# Notebooks checkpoints
 .ipynb_checkpoints/
 
-# archivos sensibles
+# Archivos sensibles
 .env
+
+# Datos procesados (muy pesados)
+data_processed/
+
+# Modelos entrenados
+*.pkl
+*.h5
+*.model
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Notebook original completo (usar los separados)
+proyecto.ipynb
