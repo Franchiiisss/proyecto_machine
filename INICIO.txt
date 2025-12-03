@@ -1,33 +1,16 @@
-En cada máquina que quieras usar el proyecto:
+a. Crear un entorno virtual nuevo:
 
-a. Crea un entorno virtual nuevo:
-
-a. Crea un entorno virtual nuevo:
-'''
 python -m venv .venv
-'''
 
 o (según versión de python):
-'''
+
 python3 -m venv .venv
-'''
 
 
-b. Activa el entorno virtual:
-En Windows:
+b. Activar el entorno virtual:
 
-.\venv\Scripts\Activate
+En Bash:
+source .venv/Scripts/activate
 
-
-c. Instala las dependencias desde tu requirements.txt:
-bash
+c. Instalar las dependencias desde tu requirements.txt:
 pip install -r requirements.txt
-
-
-
-¿Qué hacer si VSCode muestra errores?
-
-Abre el paleta de comandos (Ctrl+Shift+P) en VSCode.
-Escribe y selecciona "Python: Select Interpreter".
-Elige el Python que está dentro de tu entorno venv (puede mostrarse algo así como: .../machine/venv/Scripts/python.exe).
-¡Ya puedes trabajar!
