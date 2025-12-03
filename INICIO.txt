@@ -1,14 +1,7 @@
 a. Crear un entorno virtual nuevo:
-
 python -m venv .venv
 
-o (según versión de python):
-
-python3 -m venv .venv
-
-
 b. Activar el entorno virtual:
-
 En Bash:
 source .venv/Scripts/activate
 
