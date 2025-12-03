@@ -8,76 +8,6 @@ Sistema de recomendación basado en MLP que predice si un usuario dará like/dis
 - 100,000 ratings (1-5) de 943 usuarios sobre 1682 películas
 - Like/Dislike: umbral ≥ 4 estrellas
 
-## Estructura del Proyecto
-
-```
-proyecto_machine/
-│
-├── 1_procesamiento_datos.ipynb    # Carga, limpieza y feature engineering
-├── 2_visualizacion.ipynb          # Análisis exploratorio y visualizaciones
-├── 3_clustering.ipynb             # Construcción de personas cinéfilas
-├── 4_mlp.ipynb                    # Entrenamiento y evaluación del MLP
-│
-├── proyecto.ipynb                 # Notebook completo original
-│
-├── data_processed/                # Datos procesados
-│   ├── data_final.csv            # Dataset completo con features
-│   ├── user_features.csv         # Features de usuarios
-│   ├── movie_features.csv        # Features de películas
-│   ├── personas_cinefilas.csv    # Resumen de personas
-│   ├── model_results.csv         # Resultados de modelos
-│   └── feature_importance.csv    # Importancia de features
-│
-├── ml-100k/                       # Dataset MovieLens 100K
-├── ml-1m/                         # Dataset MovieLens 1M
-│
-├── mlp_model.pkl                  # Modelo MLP entrenado
-├── scaler.pkl                     # StandardScaler
-├── le_gender.pkl                  # LabelEncoder para género
-├── le_occupation.pkl              # LabelEncoder para ocupación
-│
-├── requirements.txt               # Dependencias del proyecto
-└── README.md                      # Este archivo
-
-```
-
-## Orden de Ejecución
-
-Para ejecutar el proyecto completo, sigue este orden:
-
-1. **1_procesamiento_datos.ipynb**
-   - Carga de datos (MovieLens 100K o 1M)
-   - Creación de variable objetivo (like/dislike)
-   - Feature engineering (preferencias, embeddings SVD)
-   - Guarda: `data_processed/data_final.csv`, `user_features.csv`, `movie_features.csv`
-
-2. **2_visualizacion.ipynb**
-   - Análisis exploratorio de datos
-   - Visualizaciones de distribuciones
-   - Análisis de embeddings (t-SNE, UMAP)
-   - Detección de clusters con DBSCAN
-
-3. **3_clustering.ipynb**
-   - Comparación de algoritmos (K-Means, GMM, Spectral)
-   - Selección de hiperparámetros
-   - Construcción de 5 personas cinéfilas
-   - Caracterización de cada persona
-   - Guarda: `personas_cinefilas.csv`
-
-4. **4_mlp.ipynb**
-   - Entrenamiento de 3 modelos MLP (Baseline, Class Weights, SMOTE)
-   - Evaluación con ROC-AUC, F1, PR-AUC
-   - Matriz de confusión y análisis de errores
-   - Métricas de ranking (Hit@K, NDCG@K)
-   - Validación cruzada
-   - Guarda: `mlp_model.pkl`, `model_results.csv`
-
-## Instalación
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Características Principales
 
 ### Features de Usuario
@@ -127,7 +57,7 @@ DATASET = '100k'  # Opciones: '100k' o '1m'
 - SMOTE se aplica solo en el conjunto de entrenamiento
 - El modelo maneja cold-start usando metadatos de usuario y película
 
-## Requisitos Cumplidos
+## Requisitos
 
 - MLP binario (usuario, película) → like  
 - Target binario (rating ≥ 4)  
